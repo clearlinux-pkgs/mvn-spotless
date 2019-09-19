@@ -4,11 +4,15 @@
 #
 Name     : mvn-spotless
 Version  : 3.23.0
-Release  : 1
+Release  : 2
 URL      : https://github.com/diffplug/spotless/archive/gradle/3.23.0.tar.gz
 Source0  : https://github.com/diffplug/spotless/archive/gradle/3.23.0.tar.gz
 Source1  : https://plugins.gradle.org/m2/com/diffplug/spotless/spotless-plugin-gradle/3.23.0/spotless-plugin-gradle-3.23.0.jar
 Source2  : https://plugins.gradle.org/m2/com/diffplug/spotless/spotless-plugin-gradle/3.23.0/spotless-plugin-gradle-3.23.0.pom
+Source3  : https://repo1.maven.org/maven2/com/diffplug/spotless/spotless-lib-extra/1.23.0/spotless-lib-extra-1.23.0.jar
+Source4  : https://repo1.maven.org/maven2/com/diffplug/spotless/spotless-lib-extra/1.23.0/spotless-lib-extra-1.23.0.pom
+Source5  : https://repo1.maven.org/maven2/com/diffplug/spotless/spotless-lib/1.23.0/spotless-lib-1.23.0.jar
+Source6  : https://repo1.maven.org/maven2/com/diffplug/spotless/spotless-lib/1.23.0/spotless-lib-1.23.0.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0 EPL-1.0
@@ -59,12 +63,28 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/com/diffplug/spotless/s
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/diffplug/spotless/spotless-plugin-gradle/3.23.0
 cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/com/diffplug/spotless/spotless-plugin-gradle/3.23.0/spotless-plugin-gradle-3.23.0.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/diffplug/spotless/spotless-lib-extra/1.23.0
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/com/diffplug/spotless/spotless-lib-extra/1.23.0/spotless-lib-extra-1.23.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/diffplug/spotless/spotless-lib-extra/1.23.0
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/com/diffplug/spotless/spotless-lib-extra/1.23.0/spotless-lib-extra-1.23.0.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/diffplug/spotless/spotless-lib/1.23.0
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/com/diffplug/spotless/spotless-lib/1.23.0/spotless-lib-1.23.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/diffplug/spotless/spotless-lib/1.23.0
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/com/diffplug/spotless/spotless-lib/1.23.0/spotless-lib-1.23.0.pom
+
 
 %files
 %defattr(-,root,root,-)
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/java/.m2/repository/com/diffplug/spotless/spotless-lib-extra/1.23.0/spotless-lib-extra-1.23.0.jar
+/usr/share/java/.m2/repository/com/diffplug/spotless/spotless-lib-extra/1.23.0/spotless-lib-extra-1.23.0.pom
+/usr/share/java/.m2/repository/com/diffplug/spotless/spotless-lib/1.23.0/spotless-lib-1.23.0.jar
+/usr/share/java/.m2/repository/com/diffplug/spotless/spotless-lib/1.23.0/spotless-lib-1.23.0.pom
 /usr/share/java/.m2/repository/com/diffplug/spotless/spotless-plugin-gradle/3.23.0/spotless-plugin-gradle-3.23.0.jar
 /usr/share/java/.m2/repository/com/diffplug/spotless/spotless-plugin-gradle/3.23.0/spotless-plugin-gradle-3.23.0.pom
 
